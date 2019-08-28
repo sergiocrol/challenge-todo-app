@@ -203,6 +203,10 @@ body {
 .todo-card-action {
   justify-self: flex-end;
 }
+.todo-card-action a {
+  text-decoration: none;
+  color: #F2627A;
+}
 
 .header-container {
   width: 100%;
@@ -241,7 +245,6 @@ body {
   height: 8rem;
   background-color: transparent;
   overflow: hidden;
-  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-evenly;

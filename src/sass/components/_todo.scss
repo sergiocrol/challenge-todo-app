@@ -41,5 +41,10 @@
 
   &-action {
     justify-self: flex-end;
+
+    a {
+      text-decoration: none;
+      color: $color-coral-two;
+    }
   }
 }
