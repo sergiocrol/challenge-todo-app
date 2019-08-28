@@ -7,6 +7,17 @@ class Todo {
       withCredentials: true,
     })
   }
+
+  newTodo(todo) {
+    const { title, body, type } = todo;
+    return this.todo.post('/todos', { title, body, type })
+      .then(({ data }) => data)
+  }
+
+  getTodos() {
+    return this.todo.get('/todos')
+      .then(({ data }) => data)
+  }
 }
 
 const todo = new Todo();

@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import todo from '../services/todo-service.js';
 
 class Nav extends Component {
-
-  showForm = () => {
-
-  }
 
   render() {
     return (
