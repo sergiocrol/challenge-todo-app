@@ -1,33 +1,150 @@
-.App {
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* we want 10px, and default measure is 16px. the percent will be = (10/16) * 100 */
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+.u-center-text {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.u-is-disabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.u-display-none {
+  display: none;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
+.u-margin-top-small {
+  margin-top: 1.5rem;
+}
+
+.u-padding-bottom-big {
+  padding-bottom: 8rem;
+}
+
+.u-padding-bottom-medium {
+  padding-bottom: 4rem;
+}
+
+.u-padding-bottom-small {
+  padding-bottom: 1.5rem;
+}
+
+.u-padding-top-big {
+  padding-top: 8rem;
+}
+
+.u-padding-top-medium {
+  padding-top: 4rem;
+}
+
+.u-padding-top-small {
+  padding-top: 1.5rem;
+}
+
+.app-title {
+  font-size: 5rem;
+}
+
+.new-todo-button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100px;
+  background-color: #F2627A;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  box-shadow: 10px 10px 10px -6px gray;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.header-container {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 4px 2px rgba(71, 71, 71, 0.336);
+}
+.header-container img {
+  height: 5rem;
+}
+@media (min-width: 768px) {
+  .header-container {
+    box-shadow: 0px 0px 0px 0px #696769;
+    border-bottom: 1px solid lightgrey;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    box-shadow: 0px 0px 9px -2px #696769;
   }
 }
+
+.navbar-container {
+  width: 100%;
+  height: 8rem;
+  background-color: transparent;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .navbar-container {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
