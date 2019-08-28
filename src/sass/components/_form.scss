@@ -1,0 +1,42 @@
+.form-container {
+  width: 80%;
+  height: 40rem;
+  background-color: white;
+  position: absolute;
+  bottom: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+  box-shadow: 0px 0px 9px -2px rgb(163, 135, 163);
+  
+
+  .triangle {
+    display: block;
+    height: 0px;
+    width: 0px;
+    border: 20px solid transparent;
+    border-top-color: white;
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 20px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin-left: -1.5em;
+      bottom: -0.6em;
+      left: 50%;
+      box-sizing: border-box;
+      
+      border: 1em solid transparent;
+      border-color: transparent transparent transparent transparent;
+      
+      transform-origin: 0 0;
+      transform: rotate(-45deg);
+      
+      box-shadow: -2px 3px 6px -4px rgb(163, 135, 163);
+    }
+  }
+}
