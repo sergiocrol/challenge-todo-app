@@ -18,6 +18,12 @@ class Todo {
     return this.todo.get('/todos')
       .then(({ data }) => data)
   }
+
+  removeTodo(id) {
+    return this.todo.delete(`/todos/${id}`)
+      .then(({ data }) => data)
+  }
+
 }
 
 const todo = new Todo();

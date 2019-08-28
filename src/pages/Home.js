@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from '../components/Header';
 import Nav from '../components/Nav';
+import Todo from '../components/Todo';
 
 import todo from '../services/todo-service.js';
 
@@ -50,6 +51,13 @@ class Home extends Component {
       })
   }
 
+  removeTodo = (id) => {
+    todo.removeTodo(id)
+      .then(todo => {
+        this.componentDidMount()
+      })
+  }
+
   prevent = (event) => {
     event.preventDefault();
     this.saveTodo();
@@ -66,7 +74,7 @@ class Home extends Component {
           {
             todoList.length ? (
               todoList.map(el => {
-                return <p key={el._id} className="u-margin-top-small">{el.title}</p>
+                return <Todo key={el._id} content={el} removeTodo={this.removeTodo} />
               })
             ) : (
                 <p>No items</p>
